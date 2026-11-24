@@ -1,0 +1,58 @@
+@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<section class="panel">
+    <h1>Create an account</h1>
+    <form asp-action="Register" method="post" class="form">
+        <div asp-validation-summary="ModelOnly" class="error"></div>
+
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" />
+        <span asp-validation-for="FirstName" class="error"></span>
+
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" />
+        <span asp-validation-for="LastName" class="error"></span>
+
+        <label asp-for="Username"></label>
+        <input asp-for="Username" />
+        <span asp-validation-for="Username" class="error"></span>
+
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email" class="error"></span>
+
+        <label asp-for="PhoneNumber"></label>
+        <input asp-for="PhoneNumber" />
+        <span asp-validation-for="PhoneNumber" class="error"></span>
+
+        <label asp-for="Age"></label>
+        <input asp-for="Age" type="number" />
+        <span asp-validation-for="Age" class="error"></span>
+
+        <label asp-for="Password"></label>
+        <input asp-for="Password" />
+        <span asp-validation-for="Password" class="error"></span>
+
+        <label asp-for="ConfirmPassword"></label>
+        <input asp-for="ConfirmPassword" />
+        <span asp-validation-for="ConfirmPassword" class="error"></span>
+
+        <label asp-for="CreditCardNumber"></label>
+        <input asp-for="CreditCardNumber" autocomplete="off" />
+        <span asp-validation-for="CreditCardNumber" class="error"></span>
+
+        <label asp-for="Website"></label>
+        <input asp-for="Website" />
+        <span asp-validation-for="Website" class="error"></span>
+
+        <label class="checkbox">
+            <input asp-for="TermsOfService" />
+            <span asp-for="TermsOfService">I accept the terms of service</span>
+        </label>
+
+        <button type="submit">Register</button>
+    </form>
+</section>
